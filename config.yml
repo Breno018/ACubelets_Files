@@ -1,0 +1,109 @@
+#-------------------------#
+#                         #
+#   NAME:     ACUBELETS   #
+#   AUTHOR:   DavidML16   #
+#                         #
+#-------------------------#
+
+
+# Language of plugin
+# Availables by default: EN, ES
+Language: EN
+
+
+# Command name, default: /cubelets and /points
+# For the changes to take effect, a full server restart is required
+Commands:
+    Cubelets: cubelets
+    Points: points
+
+
+# Database details
+MySQL:
+    Enabled: false
+    Host: localhost
+    Port: 3306
+    User: root
+    Password: example
+    Database: acubelets
+
+
+# Enable/disable if execute a command when click on barrier
+# Executor: player or console
+# Variables when executor is player: %player%
+# When dont have any cubelets to open
+NoCubelets:
+    ExecuteCommand: false
+    Executor: player
+    Command: 'help'
+
+
+# Enable/disable cubelet crafting
+Crafting: true
+
+
+# Enable/disable players can select her opening animations
+AnimationsByPlayer: false
+
+
+# Enable/disable if you want to disable the gui and open the most recent cubelet just by right clicking on the cubelet machine.
+NoGuiMode: false
+
+
+# Enable/disable if you want to disable the automatic sorting of rewards based on rarity and name
+RewardAutoSorting: true
+
+
+# Enable/disable if you want cubelet open gui updates in realtime.
+LiveGuiUpdates: true
+
+
+# Enable/disable if you want to serialize/deserialize rewards with base64 format.
+SerializeBase64: false
+
+
+# Enable/disable if you want to gift cubelets by command
+GiftCubeletsCommand: false
+
+
+# Enable/disable if you want that additionally keys can be used to directly open a cubelet
+UseKeys: false
+
+
+# Enable/disable if you want to broadcast reward messages
+BroadcastReward: false
+
+
+# Enable/disable if you want to be reminded that you have cubelets when you login
+LoginReminder: false
+
+
+# Enable/disable cubelet rewards preview
+# Available click types: LEFT, RIGHT, MIDDLE, SHIFT_LEFT or SHIFT_RIGHT
+RewardsPreview:
+    Enabled: false
+    ClickType: SHIFT_LEFT
+
+
+# Enable/disable reward duplication system
+# Change the command to execute to the one of the plugin you are using
+# Change the command to give duplicated points
+RewardsDuplication:
+    Enabled: false
+    PermissionCommand: 'lp user %player% permission set %permission% true'
+    PointsCommand: 'points give %player% %points%'
+
+
+# Change hologram settings
+# Visibility and update distance in blocks unit
+# Update interval default: 30 (1.5s)
+# Color animation default colors: &f and &c
+# Duplication hologram visible to all players (Default: false)
+Holograms:
+    VisibilityDistance: 75
+    UpdateInterval: 30
+    ColorAnimation:
+        - '&f'
+        - '&c'
+    Duplication:
+        VisibleToAllPlayers: false
